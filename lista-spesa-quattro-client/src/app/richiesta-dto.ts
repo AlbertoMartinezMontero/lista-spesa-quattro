@@ -1,3 +1,3 @@
-export class RichiestaDto{
-  nome:String;  
+export class RichiestaDto {
+  nome: string;
 }

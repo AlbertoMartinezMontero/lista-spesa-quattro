@@ -1,3 +1,3 @@
 export class RispostaDto {
-  nome: String;
+  nome: string;
 }

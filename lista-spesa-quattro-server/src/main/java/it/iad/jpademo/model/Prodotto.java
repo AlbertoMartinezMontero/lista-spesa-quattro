@@ -15,10 +15,9 @@ public class Prodotto {
     @Column
     private String nome;
 
-
     public Prodotto(String nome) {
         this.nome = nome;
-        
+
     }
 
     public Long getId() {
@@ -41,7 +40,5 @@ public class Prodotto {
     public String toString() {
         return "Prodotto{" + "id=" + id + ", nome=" + nome + '}';
     }
-
-  
 
 }

@@ -10,29 +10,30 @@ import { RispostaDto } from './risposta-dto';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  lista: String[] = [];
-  nome: String = "";
+  lista: string[] = [];
+  nome: string = "";
 
   constructor(private http: HttpClient) { }
 
   aggiungi() {
     let dto: RichiestaDto = new RichiestaDto();
-     dto.nome = this.nome;
-     this.lista.push(this.nome)
-   
-    let oss: Observable<RispostaDto> = this.http.post<RispostaDto>("http://localhost:8080/aggiungi", dto);
-    oss.subscribe(s => this.nome = s.nome);
-    this.nome=""; 
+    dto.nome = this.nome;
+    this.lista.push(this.nome)
 
+    let oss: Observable<RispostaDto> = this.http
+      .post<RispostaDto>("http://localhost:8080/aggiungi", dto);
+    oss.subscribe(s => this.nome = s.nome);
+    this.nome = "";
   }
-  
+
   cancella(lista) {
     let dto: RichiestaDto = new RichiestaDto();
-     dto.nome = this.nome;
-     this.lista.splice(lista,this.lista.length);
-   
-    let oss: Observable<RispostaDto> = this.http.post<RispostaDto>("http://localhost:8080/cancella", dto);
-    oss.subscribe(s => this.nome = s.nome); 
+    dto.nome = this.nome;
+    this.lista.splice(lista, this.lista.length);
+
+    let oss: Observable<RispostaDto> = this.http
+    .post<RispostaDto>("http://localhost:8080/cancella", dto);
+    oss.subscribe(s => this.nome = s.nome);
 
   }
 
