@@ -17,6 +17,7 @@ public class ServiceImpl implements SpesaService {
     public void aggiungiProdotto(RequestDto dto) {
         Prodotto p = new Prodotto(dto.getNome());
         prodottoRepository.save(p);
+        System.out.println("Siamo nel service");
        
         
         }
@@ -26,6 +27,8 @@ public class ServiceImpl implements SpesaService {
     @Override
     public void cancellaLista() {
         prodottoRepository.deleteAll();
+                System.out.println("Siamo nel service");
+
     }
 
 }

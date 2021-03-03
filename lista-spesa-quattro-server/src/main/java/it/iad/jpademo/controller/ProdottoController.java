@@ -1,5 +1,6 @@
 package it.iad.jpademo.controller;
 
+import it.iad.jpademo.model.Prodotto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,11 +21,14 @@ public class ProdottoController {
     @RequestMapping("/aggiungi")
     @ResponseBody
     public void aggiungi(@RequestBody RequestDto dto) {
-
+        spesaService.aggiungiProdotto(dto);
+        System.out.println("Siamo nel controller");
     }
 @RequestMapping("/aggiungi")
     @ResponseBody
     public void cancellaLista(@RequestBody RequestDto dto) {
+        spesaService.cancellaLista();
+        System.out.println("Siamo nel controller");
 
     }
 }
