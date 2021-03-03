@@ -1,4 +1,4 @@
-package it.iad.jpademo;
+package it.iad.lista_spesa_quattro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,9 +7,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan(basePackages= {"it.iad.jpademo"})
-@EnableJpaRepositories(basePackages= {"it.iad.jpademo"})
-@EntityScan(basePackages= {"it.iad.jpademo"})
+@ComponentScan(basePackages= {"it.iad.lista_spesa_quattro"})
+@EnableJpaRepositories(basePackages= {"it.iad.lista_spesa_quattro"})
+@EntityScan(basePackages= {"it.iad.lista_spesa_quattro"})
 public class JpademoApplication {
 
 	public static void main(String[] args) {
