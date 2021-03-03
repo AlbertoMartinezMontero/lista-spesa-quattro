@@ -1,8 +1,10 @@
-<input type="text" [(ngModel)]="elemento">
+<input type="text" [(ngModel)]="nome">
 <button (click)="aggiungi()">Aggiungi</button>
 <br>
 <ul>
-  <li *ngFor="let e of product;index as e">
-    {{e}}<button (click)="cancella()">X</button>
+  <li *ngFor="let nm of lista;index as e">
+    {{e}}{{nm}}
   </li>
 </ul>
+
+<button (click)="cancella(lista)">Cancella lista</button>
