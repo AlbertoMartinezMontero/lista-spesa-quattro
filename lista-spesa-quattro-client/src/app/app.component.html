@@ -4,6 +4,7 @@
 <ul>
   <li *ngFor="let nm of lista;index as e">
     {{e}}{{nm}}
+    <button (click)="cancella(nome)">Cancella lista</button>
   </li>
 </ul>
 

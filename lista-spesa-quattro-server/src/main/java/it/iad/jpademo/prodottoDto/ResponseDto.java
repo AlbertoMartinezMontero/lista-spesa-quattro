@@ -1,23 +1,17 @@
+package it.iad.jpademo.prodottoDto;
 
-package it.iad.prodottoDto;
-
-import java.util.ArrayList;
+import it.iad.jpademo.model.Prodotto;
 import java.util.List;
 
 public class ResponseDto {
 
-//    List<String> listaProdotti = new ArrayList<>();
-//
-//    public ResponseDto() {
-//    }
-//
-//    public List<String> getListaProdotti() {
-//        return listaProdotti;
-//    }
-//
-//    public void setListaProdotti(List<String> listaProdotti) {
-//        this.listaProdotti = listaProdotti;
-//    }
+    List<Prodotto> listaProdotti;
+
+    public ResponseDto() {
+    }
+
+    public ResponseDto(List<Prodotto> listaProdotti) {
+        this.listaProdotti = listaProdotti;
+    }
 
 }
-

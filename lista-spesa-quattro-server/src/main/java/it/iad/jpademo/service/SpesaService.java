@@ -1,11 +1,15 @@
 package it.iad.jpademo.service;
 
+import it.iad.jpademo.model.Prodotto;
 import it.iad.jpademo.prodottoDto.RequestDto;
+import it.iad.jpademo.prodottoDto.ResponseDto;
+import java.util.List;
 
 public interface SpesaService {
 
-    void aggiungiProdotto(RequestDto dto);
+   ResponseDto aggiungiProdotto(RequestDto dto);
 
-    void cancellaLista();
+    ResponseDto cancellaLista();
+    public List<Prodotto> listaCompleta();
 
 }
