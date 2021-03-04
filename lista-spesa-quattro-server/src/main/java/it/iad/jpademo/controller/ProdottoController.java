@@ -41,6 +41,15 @@ public class ProdottoController {
         System.out.println("Siamo nel controller");
         ResponseDto dtod = new ResponseDto(spesaService.listaCompleta());
         return dtod;
+    }
+        @RequestMapping("/listaCompleta")
+    @ResponseBody
+    public ResponseDto listaCompleta(@RequestBody RequestDto dto) {
+        spesaService.listaCompleta();
+        System.out.println("Siamo nel controller");
+        ResponseDto dtod = new ResponseDto(spesaService.listaCompleta());
+        return dtod;
 
     }
 }
+
